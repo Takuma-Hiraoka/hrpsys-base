@@ -12,8 +12,10 @@ robot::~robot() {
 }
 bool robot::init() {
   m_servoErrorLimit.resize(numJoints());
+  limit_start.resize(numJoints());
   for (unsigned int i=0; i<numJoints(); i++){
     m_servoErrorLimit[i] = DEFAULT_ANGLE_ERROR_LIMIT;
+    limit_start[i] = false;
   }
   return true;
 }

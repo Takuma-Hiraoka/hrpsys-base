@@ -29,6 +29,7 @@ public:
      */
     bool setServoErrorLimit(const char *i_jname, double i_limit);
 
+    std::vector<bool> limit_start;
     //boost::interprocess::interprocess_semaphore wait_sem;
 
     std::vector<double> m_servoErrorLimit;
